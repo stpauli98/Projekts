@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+
+<html lang = 'de'> 
+
+	<head>
+		<meta charset = "utf-8">
+		<title> Abschlussprojekt </title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<style>
+			body {
+				background-image: url('Bilder/covid.png');
+						background-repeat: no-repeat;
+						background-size: cover;
+			}
+
+	  </style>
+	</head>
+
+	<body>
+		<div class="loginbox">
+		<h1> Anmeldung für Massentests  </h1><br>
+
+		<h3><b> Bitte ihre Daten eingeben </b></h3> 
+		
+		
+		<form method="post" action="connect.php">
+			
+			<label> Name </label>
+			<input type="text" name="user_name" placeholder="Bitte Ihre Name eingeben" required><br>
+			<label>Nachname</label> <input type="text" name="user_lastName" placeholder="Bitte Ihre Nachname eingeben" required><br>
+			<label> Wann sind Sie geboren? </label><br>
+			<input type="date" name="user_birthdate" required><br> 
+			
+			<label> Bundesland </label>
+			<select name="gebOrt" size = "1">
+					<option value="Niederösterreich">Niederösterreich</option>
+					<option value="Wien">Wien</option>
+					<option value="Steiermark">Steiermark</option>
+					<option value="Voralberg">Voralberg</option>
+					<option value="Kärnten">Kärnten</option>
+					<option value="Oberösterreich">Oberösterreich</option>
+					<option value="Tirol">Tirol</option>
+					<option value="Salzburg">Salzburg</option>
+					<option value="Burgerland">Burgerland</option>
+			</select><br>
+		
+			<label> E-mail </label>
+			<input type="email" name="user_email"><br>
+			<label> Password </label>											<!--Ovoznaci da ovo mora biti ispunjenp --> 
+			<input type="password" name="user_password" placeholder="Mind. 8, Max. 15" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[!.,])[A-Za-z\d!.,]{8,15}$" 
+       title="Das Passwort muss mindestens einen Buchstaben, eine Zahl, ein Sonderzeichen (! oder ,) enthalten und eine Länge von 8 bis 15 Zeichen haben." ><br>
+
+			
+			<!-- kad se kockica odkaci poslato bude obavjestenje da je AGB=JA
+				kad ima iza type="checkbox"  "checked" znaci da ce kockica od samog pocetka biti otkacena-->
+			<label> Geschlecht </label><br>
+			
+			Männlich<input type="radio" name="user_geschl" value="Männlich" checked> 
+			Weiblich<input type="radio" name="user_geschl" value="Weiblich"><br>
+			
+			<input type= "submit" value="OK" name="absenden">
+			<input type ="reset" value="CANCEL" name="abbruch" >
+		
+		</form>
+		</div>
+		<div class="info">
+		<p>Für mehr Informationen <a href="about.html" target ="_blank"> <i>hier</i>. </a><br>
+		Wenn Sie eine Frage haben, kontaktieren Sie uns per <a href="mailto:nmil32@icloud.com" ><i>E-mail</i></a></p>
+		</div>
+		
+		<div class="pat_such_box">
+
+			<h1>Für autorisierte Personen</h1>
+		
+			<form action="suchen.php" method="post">
+    <h3> Testpersonen suchen </h3>
+    <input type="password" name="password" placeholder="Passwort eingeben"><br>
+    <label>Nachname</label>
+    <input type="text" name="user_lastName" placeholder="Patienten Nachname eingeben"><br>
+    <input type="submit" value="Suchen" name="suchen"><br>
+</form>
+
+			
+			<form action="zeigen.php" method="post">
+    			<h3> Liste der Personen </h3>
+    			<input type="password" name="password" placeholder="Passwort eingeben">
+    			<input type="submit" value="Alle anzeigen" name="anzeigen"><br>
+			</form>
+
+		
+		</div>
+
+	<div class="footer">
+        <p>Seite erstellt von: Nikola Milošević</p>
+    </div>
+		
+	</body>
+</html>
