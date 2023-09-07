@@ -14,7 +14,7 @@ Systemarchitektur:
 
 Das Projekt "Massentests für COVID-19" hat folgende Architektur:
 
-Frontend: Benutzer greifen über Webbrowser auf die Website zu. Das Frontend verwendet HTML, CSS und JavaScript zur Anzeige von Informationen, zur Eingabe von Daten und zur Kommunikation mit dem Backend.
+Frontend: Benutzer greifen über Webbrowser auf die Website zu. Das Frontend verwendet HTML und CSS zur Anzeige von Informationen, zur Eingabe von Daten und zur Kommunikation mit dem Backend.
 
 Backend: Das Backend des Systems ist in PHP entwickelt. Diese Schicht verarbeitet Benutzeranfragen, verwaltet Daten und kommuniziert mit der Datenbank.
 
@@ -22,10 +22,10 @@ Datenbank: Informationen über Bürger, ihre Anmeldungen und Tests werden in der
 
 Datenhaltung:
 
-Informationen über Bürger, einschließlich ihrer persönlichen Daten (Name, Nachname, Geburtsdatum, E-Mail, Passwort) und Testergebnisse (Testart, Ergebnisse), werden in der MySQL-Datenbank gespeichert. Benutzerpasswörter werden sicher verschlüsselt, um die Datensicherheit zu gewährleisten.
+Informationen über Bürger, einschließlich ihrer persönlichen Daten (Name, Nachname, Geburtsdatum, E-Mail, Passwort) werden in der MySQL-Datenbank gespeichert. Benutzerpasswörter werden sicher verschlüsselt, um die Datensicherheit zu gewährleisten.
 
 Sicherheit:
 
-Das Projekt wendet grundlegende Sicherheitspraktiken an, einschließlich der Validierung von Benutzereingaben, um Schwachstellen wie SQL-Injektionen zu verhindern. Es verwendet auch HTTPS zur Verschlüsselung der Kommunikation zwischen Benutzern und dem Server, um sensible Informationen zu schützen.
+Das Projekt wendet grundlegende Sicherheitspraktiken an, einschließlich der Validierung von Benutzereingaben, um Schwachstellen wie SQL-Injektionen zu verhindern.
 
 Diese technische Beschreibung gibt Einblick in die technische Seite des Projekts "Massentests für COVID-19", einschließlich der Programmiersprachen, der Datenbank, der Datenhaltung und der Sicherheitsaspekte.
